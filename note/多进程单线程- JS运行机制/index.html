@@ -24,7 +24,7 @@
 
   
 
-  <title>Meme Creater | YT Blog</title>
+  <title>多进程单线程- JS运行机制 | YT Blog</title>
 
   
 
@@ -47,7 +47,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://i.ibb.co/w6RPcXQ/QQ-20220606105940.png)"></div>
+    <div class="post-image" style="background-image: url(https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg)"></div>
   
 
   <!-- navbar -->
@@ -96,15 +96,15 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">Meme Creater</h1>
+          <h1 class="title-wrap">多进程单线程- JS运行机制</h1>
           <h2 class="title-sub-wrap">
             <strong>Yuntao</strong>
             <!-- <span>发布于</span>
-            <time  class="article-date" datetime="2022-02-11T02:29:38.000Z" itemprop="datePublished">2022-02-11</time> -->
+            <time  class="article-date" datetime="2022-06-07T01:17:35.000Z" itemprop="datePublished">2022-06-07</time> -->
           </h2>
           <ul class="wrap-list dark">
   
-    <li><a href="/categories/work/">📒 work</a></li>
+    <li><a href="/categories/note/">📒 note</a></li>
   
 </ul>
           <ul class="wrap-list dark">
@@ -131,21 +131,78 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="Meme-Creater"><a href="#Meme-Creater" class="headerlink" title="Meme Creater"></a>Meme Creater</h1><ul>
-<li><strong>Visit Site:</strong></li>
+        <h1 id="多进程单线程-JS运行机制"><a href="#多进程单线程-JS运行机制" class="headerlink" title="多进程单线程- JS运行机制"></a>多进程单线程- JS运行机制</h1><p>Created: June 6, 2022 8:01 PM<br>Last Edited Time: June 6, 2022 11:46 PM</p>
+<h1 id="区分"><a href="#区分" class="headerlink" title="区分"></a>区分</h1><p>线程是工厂，相互独立。</p>
+<p>进程是工人，相互协作，共享空间（即：共享程序的内存空间）</p>
+<p>进程是cpu资源分配的最小单元</p>
+<p>线程是cpu调度的最小单位。</p>
+<h1 id="浏览器是多进程的"><a href="#浏览器是多进程的" class="headerlink" title="浏览器是多进程的"></a>浏览器是多进程的</h1><h2 id="包含："><a href="#包含：" class="headerlink" title="包含："></a>包含：</h2><ul>
+<li>browser进程：主进程，负责浏览器界面显示与用户交互，管理各个页面、网络资源</li>
+<li>第三方插件进程：每种类型的插件对应一个进程，使用该插件时创建。</li>
+<li>GPU进程：最多一个，用于3D绘制。</li>
+<li>浏览器渲染进程：默认每个tab页面一个进程</li>
 </ul>
-<p><a href="https://how-to-program.github.io/Meme-Creater/"><strong>React App</strong></a></p>
-<h1 id="📜Overview"><a href="#📜Overview" class="headerlink" title="📜Overview"></a>📜Overview</h1><p>A dynamic web app allows read &amp; write: </p>
-<ul>
-<li>Ability to change data</li>
-<li>Highly interactive</li>
-<li>Displays data</li>
+<h2 id="浏览器多进程的优势："><a href="#浏览器多进程的优势：" class="headerlink" title="浏览器多进程的优势："></a>浏览器多进程的优势：</h2><ul>
+<li>避免单个page crash影响整个浏览器</li>
+<li>避免第三方插件crash影响整个浏览器</li>
+<li>充分利用多核优势</li>
+<li>方便使用沙盒模型隔离插件等进程，提高稳定性</li>
 </ul>
-<p>Display meme image and allow users to add texts on the top part and bottom part on the image to custom a meme.</p>
-<h1 id="✏️Technologies-x2F-Skills"><a href="#✏️Technologies-x2F-Skills" class="headerlink" title="✏️Technologies&#x2F;Skills"></a>✏️<strong>Technologies&#x2F;Skills</strong></h1><p>The website uses React for its frontend framework, with React Hooks and Event listeners to handle user operations and perform conditional rendering.</p>
-<p>Click change bottom can random fetch a new meme image from the internet. The meme images are fetched using API of a public website <a target="_blank" rel="noopener" href="https://imgflip.com/">https://imgflip.com/</a>.</p>
-<h1 id="👩🏻‍💻Desktop-Screenshots"><a href="#👩🏻‍💻Desktop-Screenshots" class="headerlink" title="👩🏻‍💻Desktop Screenshots"></a><strong>👩🏻‍💻</strong>Desktop Screenshots</h1><p><img src="https://i.ibb.co/w6RPcXQ/QQ-20220606105940.png" alt="https://i.ibb.co/w6RPcXQ/QQ-20220606105940.png"></p>
-<p><img src="https://i.ibb.co/x147Dcv/QQ-20220606110222.png" alt="https://i.ibb.co/x147Dcv/QQ-20220606110222.png"></p>
+<h2 id="重点！浏览器内核（渲染进程）"><a href="#重点！浏览器内核（渲染进程）" class="headerlink" title="重点！浏览器内核（渲染进程）"></a>重点！浏览器内核（渲染进程）</h2><h2 id="主要线程："><a href="#主要线程：" class="headerlink" title="主要线程："></a>主要线程：</h2><ol>
+<li>GUI渲染线程：负责渲染绘制，repaint和reflow时会执行。GUI和JS引擎互斥，JS在执行的话GUI会被挂起。</li>
+<li>JS引擎：负责处理JS脚本，只有一个线程，执行时间太长会造成页面渲染阻塞。</li>
+<li>事件触发线程：控制事件循环，异步代码块会添加到事件线程的队尾，等待JS引擎有空了来收拾它们。</li>
+<li>定时触发器线程：setInterval和setTimeout所在线程。JS引擎是单线程，阻塞的话会影响记时的准确，因此单独一个线程来计时，记时完毕后添加到时间队列，等JS空闲了立即执行。最小4ms。</li>
+<li>异步http请求进程：状态变更放入事件队列。</li>
+</ol>
+<h2 id="Browser和浏览器内核的通信过程"><a href="#Browser和浏览器内核的通信过程" class="headerlink" title="Browser和浏览器内核的通信过程"></a>Browser和浏览器内核的通信过程</h2><ol>
+<li>Browser收到用户请求，首先获取页面内容，然后通过RendererHost接口传递给Renderer。</li>
+<li>Renderer接口收到后简单解释交给渲染进程开始渲染。其中可能需要browser进程获取资源和GPU进程帮助渲染，可能有JS进程操作DOM，最后把结果给Browser。</li>
+<li>Browser收到结果绘制出来。</li>
+</ol>
+<h1 id="梳理浏览器内核中线程的关系"><a href="#梳理浏览器内核中线程的关系" class="headerlink" title="梳理浏览器内核中线程的关系"></a>梳理浏览器内核中线程的关系</h1><ul>
+<li><p>GUI渲染线程与JS引擎线程互斥</p>
+<p>  先JS后GUI</p>
+</li>
+<li><p>JS阻塞页面加载</p>
+<p>  GUI要等JS空闲之后才执行，所以JS执行时间过长会阻塞页面</p>
+</li>
+<li><p>WebWorker，JS的多线程？</p>
+<p>  为解决密集运算，创建Worker时，JS引擎向浏览器申请开一个子线程（完全受主线程控制，而且不能操作DOM）</p>
+<p>  JS引擎与Worker线程间以特定的方式通信（某API）</p>
+<p>  JS引擎依然是单线程。</p>
+</li>
+</ul>
+<h1 id="梳理浏览器渲染过程"><a href="#梳理浏览器渲染过程" class="headerlink" title="梳理浏览器渲染过程"></a>梳理浏览器渲染过程</h1><p>读取缓存⇒DNS解析⇒TCP连接，三次握手⇒发送HTTP请求⇒服务器处理请求返回HTTP报文⇒浏览器渲染⇒断开连接，TCP四次挥手</p>
+<p>渲染过程：</p>
+<ol>
+<li>解析html建立dom树</li>
+<li>解析css构建render树（将css代码解析成树形结构，结合DOM合成render树）</li>
+<li>布局render树（reflow），负责各元素尺寸和位置的计算</li>
+<li>绘制render树（paint）</li>
+<li>浏览器将各层信息发送给GPU，GPU将各层合成，显示在屏幕上</li>
+</ol>
+<h3 id="load事件和DOMContentLoaded事件"><a href="#load事件和DOMContentLoaded事件" class="headerlink" title="load事件和DOMContentLoaded事件"></a>load事件和DOMContentLoaded事件</h3><p>渲染完毕后会触发load事件</p>
+<p>当DOM加载完成，触发DOMContentLoaded事件</p>
+<p>所有的DOM、样式表、脚本、图片都加载完成，触发onload</p>
+<p>所以load后触发</p>
+<h3 id="css加载是否会阻塞dom树渲染？"><a href="#css加载是否会阻塞dom树渲染？" class="headerlink" title="css加载是否会阻塞dom树渲染？"></a>css加载是否会阻塞dom树渲染？</h3><p>css由单独的下载线程异步下载的。</p>
+<p>不会阻塞dom树解析，但渲染时需等css加载完毕，所以会阻塞render树渲染。</p>
+<h1 id="Event-Loop-JS执行机制"><a href="#Event-Loop-JS执行机制" class="headerlink" title="Event Loop - JS执行机制"></a>Event Loop - JS执行机制</h1><p>JS分为同步任务和异步任务，同步任务都在主线程上执行，形成一个执行栈。主线程之外，事件触发线程还管理着一个任务队列，只要异步任务有了运行结果，就在任务列表中放置一个事件。</p>
+<p>一旦执行栈中的同步任务zhi xin异步任务添加到可执行栈中开始执行。</p>
+<h2 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h2><p>定时器线程：当使用setTimeout或setInterval时，它需要定时器线程计时，计时完成后会将特定的时间推入事件队列中。</p>
+<p>W3C中规定，setTimeout中低于4ms的时间间隔算作4ms。</p>
+<p>setTimeout计时结束之后就会执行，但是执行完之后才继续setTimeout计时，中间多了代码执行时间的误差。</p>
+<p>setInterval每次都精确地隔一段时间推入一个事件。但是事件的实际执行时间不一定准确，可能是这个事件还没执行完毕，下一个事件就来了。这是setInterval的致命问题，累积效应，影响间隔效果。（JS高程提到JS引擎会进行优化，不会重复添加，但是还是会达不到理想间隔）</p>
+<h2 id="macrotask与microtask"><a href="#macrotask与microtask" class="headerlink" title="macrotask与microtask"></a>macrotask与microtask</h2><ul>
+<li>macrotask宏任务，执行栈里的任务为宏任务。浏览器为了让JS内部task与DOM任务能够有序执行，会在一个task执行开始前，对页面进行重新渲染。</li>
+<li>microtask微任务，在当前task执行结束之后立即执行的任务，当前task后，下一个task之前，在渲染之前，所以响应速度会比setTimeout更快。即：在每个宏任务执行之后，会将产生的微任务都执行完毕。</li>
+</ul>
+<p>宏任务：主代码块，setTimeout，setInterval</p>
+<p>微任务：promise，process.nextTick（在node环境下，process.nextTick的优先级更高，会比Promise先执行）</p>
+<p>宏任务都是放在事件队列中的，由事件触发线程维护。</p>
+<p>微任务都是添加到微任务队列中，等待当前宏任务执行过后执行，由JS引擎线程维护。</p>
+<h3 id="运行机制"><a href="#运行机制" class="headerlink" title="运行机制"></a>运行机制</h3><p>执行一个宏任务⇒执行途中遇到的微任务都加入微任务列表⇒当前宏任务结束，立即执行微任务队列（依次）⇒微任务执行完毕，检查渲染，然后GUI线程接管渲染⇒渲染完毕之后，JS接管，继续执行下一个宏任务</p>
 
       </section>
 
@@ -156,12 +213,10 @@
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://i.ibb.co/3p8k25d/Untitled.png"></div>
-    
     <div class="card-text">
       
-        <a href="/note/JS%E9%AB%98%E7%A8%8B%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">JS高程学习（一）</h2>
+        <a href="/work/%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%8D%95%E7%BA%BF%E7%A8%8B-%20JS%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%20381507044e644378aca598659df20151/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">(no title)</h2>
         </a>
       
       <div class="card-text--row">Newer</div>
@@ -173,12 +228,12 @@
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://i.ibb.co/T1L14zv/QQ-20220605142628.png"></div>
+      <div class="card-cover" background-image-lazy data-img="https://i.ibb.co/3p8k25d/Untitled.png"></div>
     
     <div class="card-text">
       
-        <a href="/work/NFT%20preview%20card%20component/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">NFT preview card component</h2>
+        <a href="/note/JS%E9%AB%98%E7%A8%8B%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">JS高程学习（一）</h2>
         </a>
       
       <div class="card-text--row">Older</div>
