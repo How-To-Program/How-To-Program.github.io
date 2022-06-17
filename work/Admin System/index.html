@@ -24,7 +24,7 @@
 
   
 
-  <title>JS高程学习（一） | YT Blog</title>
+  <title>Admin System | YT Blog</title>
 
   
 
@@ -47,7 +47,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://i.ibb.co/3p8k25d/Untitled.png)"></div>
+    <div class="post-image" style="background-image: url(https://i.ibb.co/R3Hv7tJ/QQ-20220617210419.png)"></div>
   
 
   <!-- navbar -->
@@ -96,15 +96,15 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">JS高程学习（一）</h1>
+          <h1 class="title-wrap">Admin System</h1>
           <h2 class="title-sub-wrap">
             <strong>Yuntao</strong>
             <!-- <span>发布于</span>
-            <time  class="article-date" datetime="2022-04-17T06:50:48.000Z" itemprop="datePublished">2022-04-17</time> -->
+            <time  class="article-date" datetime="2022-06-17T13:04:58.000Z" itemprop="datePublished">2022-06-17</time> -->
           </h2>
           <ul class="wrap-list dark">
   
-    <li><a href="/categories/note/">📒 note</a></li>
+    <li><a href="/categories/work/">📒 work</a></li>
   
 </ul>
           <ul class="wrap-list dark">
@@ -131,106 +131,44 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="JavaScript高程"><a href="#JavaScript高程" class="headerlink" title="JavaScript高程"></a>JavaScript高程</h1><p>Created: April 17, 2022 9:33 AM<br>Last Edited Time: April 17, 2022 9:17 PM<br>Type: Technical Spec</p>
-<h1 id="Ch1-什么是JavaScript"><a href="#Ch1-什么是JavaScript" class="headerlink" title="Ch1 什么是JavaScript"></a>Ch1 什么是JavaScript</h1><ul>
-<li><input disabled type="checkbox"> DOM</li>
-<li><input disabled type="checkbox"> BOM</li>
+        <h1 id="Admin-System"><a href="#Admin-System" class="headerlink" title="Admin System"></a>Admin System</h1><h1 id="📜Overview"><a href="#📜Overview" class="headerlink" title="📜Overview"></a>📜Overview</h1><p>Ecommerce Admin System allows administrators to perform CRUD operations and manage users, products and orders.</p>
+<h1 id="✏️Technologies-x2F-Skills"><a href="#✏️Technologies-x2F-Skills" class="headerlink" title="✏️Technologies&#x2F;Skills"></a>✏️<strong>Technologies&#x2F;Skills</strong></h1><p>The front-end is build with <strong>React</strong>, <strong>React Hooks</strong>, <strong>React Router</strong>, <strong>axios</strong> and the backend is build with <strong>Express</strong>, <strong>MongoDB</strong>, <strong>NodeJS</strong>.<br>Compiled and validated test data in <strong>Postman</strong> and do authentication via <strong>JWT</strong>.<br>Integrated <strong>Recharts</strong> API to setup nice charts and cards to display the number of active users and merchandise sales per month.<br>Implemented dynamic add&#x2F;drop form in create page.<br>Specified naming conventions of local storage and maintain the privacy with <strong>CryptoJS</strong>.<br>Solved registration of dynamic routes.</p>
+<h1 id="👩🏻‍💻Desktop-Screenshots"><a href="#👩🏻‍💻Desktop-Screenshots" class="headerlink" title="👩🏻‍💻Desktop Screenshots"></a><strong>👩🏻‍💻</strong>Desktop Screenshots</h1><ul>
+<li>Home Page</li>
 </ul>
-<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><p>文档对象模型 document object model，DOM将页面抽象为一组分层节点，创建表示文档的树，使开发者可以随心所欲地删除、添加、替换、修改节点。提供与网页内容交互的方法与接口。</p>
-<p>实例：</p>
-<p><img src="https://i.ibb.co/3p8k25d/Untitled.png"></p>
-<h3 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h3><p>浏览器对象模型，提供与浏览器交互的方法与接口，特定于浏览器的扩展：</p>
+<p><img src="https://i.ibb.co/R3Hv7tJ/QQ-20220617210419.png" alt="https://i.ibb.co/R3Hv7tJ/QQ-20220617210419.png"></p>
 <ul>
-<li>弹出新浏览器窗口的能力</li>
-<li>移动缩放浏览器窗口的能力</li>
-<li>navigator对象</li>
-<li>。。。</li>
+<li>User List</li>
 </ul>
-<h1 id="Ch2-HTML中的JavaScript"><a href="#Ch2-HTML中的JavaScript" class="headerlink" title="Ch2 HTML中的JavaScript"></a>Ch2 HTML中的JavaScript</h1><ul>
-<li><input disabled type="checkbox"> <script></li>
-<li><input disabled="" type="checkbox"> 行内脚本与外部脚本</li>
-<li><input disabled="" type="checkbox"> 文档模式对JavaScript的影响</li>
-<li><input disabled="" type="checkbox"> 确保JavaScript不可用时的用户体验</li>
-</ul>
-<h2 id="元素"><a href="#元素" class="headerlink" title="元素"></a><script>元素</h2><p>八个属性，src属性设置为包含文件的URL，依照出现的顺序被解析。</p>
-<p>使用方式有两种：包含外部JS文件；直接在网页中嵌入JS代码：</p>
+<p><img src="https://i.ibb.co/prBbBXw/QQ-20220617211234.png" alt="https://i.ibb.co/prBbBXw/QQ-20220617211234.png"></p>
 <ul>
-<li>直接嵌入：不能在代码中出现< /script>，如console.log(xxx)，可以加转义符变为</script></li>
-<li>包含外部JS：</li>
+<li>User Detail</li>
 </ul>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;example.js&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>浏览器会按照script标签在页面中出现的顺序依次解释它们，前提是它们没有使用 defer 和 async 属性。第二个script标签的代码必须在第一个script标签的代码解释完毕才能开始解释，第三个则必须等第二个解释完。</p>
-<h3 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h3><p>现代 Web 应用程序通常将所有 JavaScript 引用放在< body >元素中的页面内容后面。</p>
-<h3 id="defer"><a href="#defer" class="headerlink" title="defer"></a>defer</h3><p>脚本会被延迟到整个页面都解析完毕后再运行，立即开始下载，只对外部脚本文件有效。</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script defer src=<span class="string">&quot;example1.js&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="异步执行脚本"><a href="#异步执行脚本" class="headerlink" title="异步执行脚本"></a>异步执行脚本</h3><p>和defer相似，立即开始下载，只适用于外部脚本。给脚本添加 async 属性的目的是告诉浏览器，不必等脚本下载和执行完后再加载页面，同样也不必等到该异步脚本下载和执行后再加载其他脚本。</p>
-<h3 id="动态加载脚本"><a href="#动态加载脚本" class="headerlink" title="动态加载脚本"></a>动态加载脚本</h3><h3 id="XHTML"><a href="#XHTML" class="headerlink" title="XHTML"></a>XHTML</h3><h2 id="文档模式"><a href="#文档模式" class="headerlink" title="文档模式"></a>文档模式</h2><p>混杂模式（quirks mode）、标准模式（standard mode）</p>
-<p>没有在文档开头声明doctype：混杂模式（不合理，混杂模式在不同浏览器中的差异很大）。</p>
-<h2 id="noscript-元素"><a href="#noscript-元素" class="headerlink" title="< noscript >元素"></a>< noscript >元素</h2><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>JavaScript 是通过< script >元素插入到 HTML 页面中的。这个元素可用于把 JavaScript 代码嵌入到HTML 页面中，跟其他标记混合在一起，也可用于引入保存在外部文件中的 JavaScript。</p>
+<p><img src="https://i.ibb.co/48HGynM/QQ-20220617211324.png" alt="https://i.ibb.co/48HGynM/QQ-20220617211324.png"></p>
 <ul>
-<li>要包含外部 JavaScript 文件，必须将 src 属性设置为要包含文件的 URL。文件可以跟网页在同一台服务器上，也可以位于完全不同的域。</li>
-<li>所有< script >元素会依照它们在网页中出现的次序被解释。在不使用 defer 和 async 属性的情况下，包含在< script >元素中的代码必须严格按次序解释。</li>
-<li>对不推迟执行的脚本，浏览器必须解释完位于< script >元素中的代码，然后才能继续渲染页面的剩余部分。为此，通常应该把< script >元素放到页面末尾，介于主内容之后及< /body>标签之前。</li>
-<li>可以使用 defer 属性把脚本推迟到文档渲染完毕后再执行。推迟的脚本原则上按照它们被列出的次序执行。</li>
-<li>可以使用 async 属性表示脚本不需要等待其他脚本，同时也不阻塞文档渲染，即异步加载。异步脚本不能保证按照它们在页面中出现的次序执行。</li>
-<li>通过使用< noscript >元素，可以指定在浏览器不支持脚本时显示的内容。如果浏览器支持并启用脚本，则< noscript >元素中的任何内容都不会被渲染。</li>
+<li>New User</li>
 </ul>
-<h1 id="Ch3-语言基础"><a href="#Ch3-语言基础" class="headerlink" title="Ch3 语言基础"></a>Ch3 语言基础</h1><ul>
-<li><input disabled type="checkbox"> 语法</li>
-<li><input disabled type="checkbox"> 数据类型</li>
-<li><input disabled type="checkbox"> 流控制语句</li>
-<li><input disabled type="checkbox"> 理解函数</li>
-</ul>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>区分大小写。</p>
-<p>标识符，就是变量、函数、属性或函数参数的名称。标识符可以由一或多个下列字符组成：</p>
+<p><img src="https://i.ibb.co/pr7QbPw/QQ-20220617211357.png" alt="https://i.ibb.co/pr7QbPw/QQ-20220617211357.png"></p>
 <ul>
-<li>第一个字符必须是一个字母、下划线（_）或美元符号（$）；</li>
-<li>剩下的其他字符可以是字母、下划线、美元符号或数字。</li>
+<li>Product List</li>
 </ul>
-<p>语句以分号结尾，不加也有效，但不推荐。</p>
-<h2 id="关键字与保留字"><a href="#关键字与保留字" class="headerlink" title="关键字与保留字"></a>关键字与保留字</h2><p>不能作为标识符或属性名：</p>
-<p><img src="https://i.ibb.co/zswSb5c/Untitled1.png"></p>
-<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>var const let，只有var可以在ES6以前用</p>
-<h3 id="var"><a href="#var" class="headerlink" title="var"></a>var</h3><p>声明后可以改变保存的值和类型，但不推荐</p>
+<p><img src="https://i.ibb.co/r4jGn1S/QQ-20220617211207.png" alt="https://i.ibb.co/r4jGn1S/QQ-20220617211207.png"></p>
 <ul>
-<li>声明作用域：为包含它的函数的局部变量，在函数退出时被销毁；如果去掉var声明，则可以创建一个全局变量。</li>
-<li>声明提升：会将声明提升到函数顶部，但赋值不会被提升，因此允许出现冗余声明。</li>
+<li>Product Detail</li>
 </ul>
-<h3 id="let"><a href="#let" class="headerlink" title="let"></a>let</h3><ul>
-<li>声明作用域：块级作用域，这是和var最大的区别，var是函数作用域。块作用域是函数作用域的子集，不允许冗余声明。</li>
-<li>暂时性死区：JS会注意到后面声明的let，但不提升，在声明之前不能以任何方式来引用未声明的变量。</li>
-<li>全局声明：全局作用域中let的声明不会成为window对象的属性，var会。</li>
-<li>条件声明：没看懂</li>
-<li>for循环中的let：迭代变量的作用域仅限于for循环内部。var在退出循环时，迭代变量保存的时导致循环退出的值；let在后台为每个迭代循环声明一个新的迭代变量。</li>
-</ul>
-<h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><p>与let基本相同，唯一重要的区别是它声明变量时必须同时初始化变量且尝试修改该变量会导致错误。不允许重复声明，块级作用域。</p>
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>简单数据类型/原始类型：Undefined、Null、Boolean、Number、String 和 Symbol，六种，其中symbol是ES6新增。</p>
-<p>复杂数据类型：Object</p>
-<h3 id="typeof操作符"><a href="#typeof操作符" class="headerlink" title="typeof操作符"></a>typeof操作符</h3><p>typeof xx：简单数据类型（除null）表示为本身，null返回object，Object表示为对象或null，function为function</p>
+<p><img src="https://i.ibb.co/M2rYrcF/QQ-20220617211424.png" alt="https://i.ibb.co/M2rYrcF/QQ-20220617211424.png"></p>
 <ul>
-<li>Undefined：声明但未赋值，不显式定义为undefined</li>
-<li>Null：在定义将来要保存对象值的变量时，建议使用 null 来初始化。null == undefined</li>
-<li>Boolean：</li>
+<li>New Product</li>
 </ul>
-<p><img src="https://i.ibb.co/5xHk4fH/Untitled2.png"></p>
+<p><img src="https://i.ibb.co/cQxMby4/QQ-20220617211522.png" alt="https://i.ibb.co/cQxMby4/QQ-20220617211522.png"></p>
 <ul>
-<li>Number：八进制以0开头，十六进制以0x开头</li>
+<li>Order List</li>
 </ul>
-<ol>
-<li><p>0.1+0.2 ！= 0.3，而是0.300 000 000 000 000 04，之所以存在这种舍入错误，是因为使用了 IEEE 754 数值。</p>
-</li>
-<li><p>值的范围：ECMAScript 可以表示的最小数值保存在Number.MIN_VALUE 中；可以表示的最大数值保存在Number.MAX_VALUE 中，如果某个计算得到的数值结果超出了 JavaScript 可以表示的范围，那么这个数值会被自动转换为一个特殊的 Infinity（无穷）值。</p>
-</li>
-<li><p>NaN：</p>
-<p> console.log(0/0); // NaN<br> console.log(-0/+0); // NaN<br> 如果分子是非 0 值，分母是有符号 0 或无符号 0，则会返回 Infinity 或-Infinity：<br> console.log(5/0); // Infinity<br> console.log(5/-0); // -Infinity</p>
-</li>
-<li><p>数值转换：Number()、parseInt()、parseFloat()</p>
-<p> Number()，按常规转换，undefined转换为NaN，null为0，字符串转换不了为NaN</p>
-<p> P62</p>
-</li>
-</ol>
+<p><img src="https://i.ibb.co/r0t2d7G/QQ-20220617211256.png" alt="https://i.ibb.co/r0t2d7G/QQ-20220617211256.png"></p>
+<ul>
+<li>Order Detail</li>
+</ul>
+<p><img src="https://i.ibb.co/jTxny9z/QQ-20220617211451.png" alt="https://i.ibb.co/jTxny9z/QQ-20220617211451.png"></p>
 
       </section>
 
@@ -241,12 +179,10 @@
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://i.ibb.co/1G3VMN6/QQ-20220617194046.png"></div>
-    
     <div class="card-text">
       
-        <a href="/note/%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%8D%95%E7%BA%BF%E7%A8%8B-%20JS%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">多进程单线程- JS运行机制</h2>
+        <a href="/work/Admin%20System/Admin%200067b0d482c144c5a7f3ab2bbb7ea276/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">(no title)</h2>
         </a>
       
       <div class="card-text--row">Newer</div>
@@ -258,12 +194,12 @@
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://i.ibb.co/0Mr59QD/QQ-20220617130043.png"></div>
+      <div class="card-cover" background-image-lazy data-img="https://i.ibb.co/G9MTPTT/localhost-3000-carts-text-1.png"></div>
     
     <div class="card-text">
       
-        <a href="/work/Todo%20List/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">Todo List</h2>
+        <a href="/work/Ecommerce/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">Ecommerce</h2>
         </a>
       
       <div class="card-text--row">Older</div>
